@@ -7,7 +7,10 @@ cnv.width = 800;
 cnv.height = 600;
 
 // Global Variables
-let myArray = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300];
+let myArray = [];
+for (let n = 0; n < 100; n++) {
+    myArray.push(300);
+}
 
 
 // Main Program Loop
@@ -37,11 +40,15 @@ document.addEventListener("keydown", keydownhandler);
 // Event Function
 function keydownhandler(event) {
 
-    if (event.code == "Space") { // WHen Space is pressed
+    if (event.code == "Space") { // When Space is pressed
         for (let i = 0; i < myArray.length; i++) {
             myArray[i] += Math.randomDec(-5, 5);
         }
     } else if (event.code == "KeyR") { // When R is pressed
-        myArray = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300];
+        
+        myArray = [];
+        for (let n = 0; n < 100; n++) {
+            myArray.push(300);
+        }
     }
 }
